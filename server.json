@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "com.twmarketdata/tw-market-data",
+  "description": "Taiwan stock market data (TWMD): official-source, point-in-time-safe datasets via read-only tools.",
+  "version": "1.28.1",
+  "websiteUrl": "https://twmarketdata.com",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.twmarketdata.com/mcp",
+      "headers": [
+        {
+          "name": "X-API-Key",
+          "description": "TWMD API key (get one at https://twmarketdata.com). A key-free trial tier is available for sample tickers.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
